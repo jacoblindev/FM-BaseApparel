@@ -25,6 +25,7 @@ body {
     grid-template-areas: "header pic"
                          "main pic"
                          "footer pic";
+    background-image: url(./images/bg-pattern-desktop.svg);
 }
 
 .container {
@@ -99,9 +100,7 @@ main button {
     height: 50px;
     border-radius: 25px;
     border: none;
-    font-size: 1.2em;
     background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    color: white;
     box-shadow: 0 10px 15px 0 hsla(0, 36%, 70%, 0.5);
 }
 

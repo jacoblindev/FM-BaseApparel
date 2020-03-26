@@ -25,10 +25,10 @@
       Hello fellow shoppers! We're currently building our new fashion store.
       Add your email below to stay up-to-date with announcements and our launch deals.
     </p>
-    <form>
-      <input type="email" name="email" id="CTA" placeholder="Email Address" autocomplete="off" required>
-      <!-- <span>Please provide a valid email</span> -->
-      <button><i class="fas fa-chevron-right"></i></button>
+    <form id="app">
+      <input type="email" name="email" id="CTA" placeholder="Email Address" autocomplete="off">
+      <span v-if="hasError">Please provide a valid email</span>
+      <button><img src="./images/icon-arrow.svg" alt="Arrow point to right"></button>
     </form>
   </main>
   <footer class="container">
@@ -38,7 +38,16 @@
       <a href="https://github.com/jacoblindev" target="_blank">Jacob Lin</a>
     </p>
   </footer>
-  <script src="https://kit.fontawesome.com/b4982d65ee.js" crossorigin="anonymous"></script>
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        hasError: false
+      }
+    })
+  </script>
 </body>
 
 </html>
