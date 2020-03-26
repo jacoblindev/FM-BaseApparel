@@ -12,16 +12,149 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    grid-template-areas: "header pic"
+                         "main pic"
+                         "footer pic";
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    align-self: center;
+}
+
+/* Header Section */
+header {
+    grid-area: header;
+}
+
+/* Main Section */
+main {
+    grid-area: main;
+}
+
+main h1, main h2 {
+    font-size: 3.6em;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    line-height: 1.2em;
+}
+
+main h2 {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+
+main h1 {
+    color: var(--Dark-Grayish-Red);
+    font-weight: 600;
+}
+
+main p {
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    margin: 1.6em 0 2em;
+}
+
+main form {
+    position: relative;
+}
+
+#CTA {
+    width: 90%;
+    height: 50px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid var(--Desaturated-Red);
+    opacity: .6;
+}
+
+input[type="email"]::placeholder {
+    padding-left: 2em;
+    color: var(--Desaturated-Red);
+    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input[type="email"]:focus {
+    padding-left: 2em;
+    outline: none;
+}
+
+main button {
+    position: absolute;
+    right: 10px;
+    width: 20%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.2em;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    color: white;
+    box-shadow: 0 10px 15px 0 hsla(0, 36%, 70%, 0.5);
+}
+
+/* Picture Section */
+picture {
+    grid-area: pic;
+}
+
+picture img {
+    height: 100vh;
+}
 
 /* Footer: Attribution Section */
+footer {
+    grid-area: footer;
+}
+
 .attribution { 
     font-size: 12px; 
-    text-align: center; 
-    padding: 2em 0;
 }
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
     text-decoration: none;
     font-weight: 300;
+}
+
+/* Tablet Version */
+/* @media screen and (max-width: 799px) {
+
+} */
+
+/* Mobile Version */
+@media screen and (max-width: 414px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 30vh 60vh 10vh;
+        grid-template-areas: "header"
+                             "pic"
+                             "main"
+                             "footer";
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    header img {
+        width: 35%;
+        padding: 1em 0 1em 1em;
+    }
+
+    picture img {
+        height: auto;
+    }
 }

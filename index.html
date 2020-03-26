@@ -10,32 +10,31 @@
 </head>
 
 <body>
-  <section>
-    <header>
-      <img src="./images/logo.svg" alt="Logo">
-    </header>
-    <picture>
-      <source media="(max-width: 799px)" srcset="./images/hero-mobile.jpg">
-      <source media="(min-width: 800px)" srcset="./images/hero-desktop.jpg">
-      <img src="./images/hero-desktop.jpg" alt="Lady with orange shirt">
-    </picture>
-    <main>
-      <h2>We're</h2>
-      <h2>coming soon</h2>
-      <p>
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our launch deals.
-      </p>
-      <form action="#" method="post">
-        <input type="email" name="email" id="CTA">
-        <button><i class="fas fa-chevron-right"></i></button>
-      </form>
-    </main>
-
-  </section>
-  <footer>
+  <header class="container">
+    <img src="./images/logo.svg" alt="Logo">
+  </header>
+  <picture>
+    <source media="(max-width: 414px)" srcset="./images/hero-mobile.jpg">
+    <source media="(min-width: 415px)" srcset="./images/hero-desktop.jpg">
+    <img src="./images/hero-desktop.jpg" alt="Lady with orange shirt">
+  </picture>
+  <main class="container">
+    <h2>We're</h2>
+    <h1>coming soon</h1>
+    <p>
+      Hello fellow shoppers! We're currently building our new fashion store.
+      Add your email below to stay up-to-date with announcements and our launch deals.
+    </p>
+    <form>
+      <input type="email" name="email" id="CTA" placeholder="Email Address" autocomplete="off" required>
+      <!-- <span>Please provide a valid email</span> -->
+      <button><i class="fas fa-chevron-right"></i></button>
+    </form>
+  </main>
+  <footer class="container">
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | Coded by
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | Coded
+      by
       <a href="https://github.com/jacoblindev" target="_blank">Jacob Lin</a>
     </p>
   </footer>
