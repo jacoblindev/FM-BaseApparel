@@ -27,7 +27,8 @@
     </p>
     <form id="app">
       <input type="email" name="email" id="CTA" placeholder="Email Address" autocomplete="off">
-      <span v-if="hasError">Please provide a valid email</span>
+      <img class="Error" src="./images/icon-error.svg" alt="Error sign">
+      <span class="Error">Please provide a valid email</span>
       <button><img src="./images/icon-arrow.svg" alt="Arrow point to right"></button>
     </form>
   </main>
@@ -38,16 +39,6 @@
       <a href="https://github.com/jacoblindev" target="_blank">Jacob Lin</a>
     </p>
   </footer>
-  <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        hasError: false
-      }
-    })
-  </script>
 </body>
 
 </html>
